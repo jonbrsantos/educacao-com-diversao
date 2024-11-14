@@ -1,12 +1,6 @@
 from flask import Flask, render_template, redirect, request, flash
 import json
 import ast
-#import mysql.connector
-
-app = Flask(__name__)
-
-
-app.config['SECRET_KEY'] = 'senha_admin'
 
 logado = False
 aluno = ""
@@ -125,7 +119,3 @@ def memoria():
 @app.route('/sair')
 def sair():
     return redirect('/')
-
-
-if __name__ in "__main__":
-    app.run(debug=True) 
