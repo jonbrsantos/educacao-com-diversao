@@ -1,0 +1,76 @@
+body {
+    font-family: 'Comic Sans MS', cursive;
+    background: url('../fundo10.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#header {
+    background: url('../fundo10.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#content {
+    display: flex;
+    flex-grow: 1;
+    background: url('../logo.jpeg') no-repeat center center fixed;
+    justify-content: center;
+
+}
+
+#display {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../fundo10.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 10px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+#menu {
+    width: 200px;
+    height: 80%;
+
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.menu-button {
+    width: 200px;
+    height: 80px;
+    margin: 10px 0;
+    opacity: 2;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FF6347;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-button:hover {
+    transform: scale(1.1);
+}
+
+#display-image {
+    max-width: 98%;
+    max-height: 98%;
+    transition: opacity 0.5s ease;
+}

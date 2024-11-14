@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexão de Letras</title>
+    <link rel="stylesheet" href="../static/css/alfabeto.css">
+</head>
+<body>
+    <div id="content">
+        <div class="game-container">
+            
+            <h1>ALFABETO DIVERTIDO</h1>
+            <p id="instruction">ARRASTE A LETRA COM A INICIAL DE CADA IMAGEM:</p>
+            <div id="letters" class="letters-container"></div>
+            <div id="images" class="images-container"></div>
+            <p id="feedback"></p>
+            <div id="score">
+                <p>ACERTOS: <span id="correct-count">0</span></p>
+                <p>ERROS: <span id="error-count">0</span></p>
+                <p>TEMPO: <span id="timer">0</span> SEGUNDOS</p>
+            </div>
+        </div>
+        <div id="menu">
+            <form action="/alfabeto" method="get">
+                <button class="menu-button" type="submit">Alfabeto Divertido</button>
+            </form>
+            <form action="/rimas" method="get">
+                <button class="menu-button" type="submit">Rimas divertidas</button>
+            </form>
+            <form action="/memoria" method="get">
+                <button class="menu-button" type="submit">Memoria com Números</button>
+            </form>
+            <form action="/sair" method="get">
+                <button class="menu-button" type="submit">Sair</button>
+            </form>
+        </div>
+    </div>
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <h2>PARABÉNS! VOCÊ GANHOU!</h2>
+            <p>TEMPO GASTO: <span id="time-spent"></span> SEGUNDOS</p>
+            <p>GOSTARIA DE JOGAR NOVAMENTE OU FECHAR O JOGO?</p>
+            <button id="restart-button">JOGAR NOVAMENTE</button>
+            <form action="/selectgame" method="get">
+                <button class="menu-button" type="submit">FECHAR</button>
+            </form>
+        </div>
+    </div>
+    <script src="../static/js/alfabeto.js"></script>
+</body>
+</html>

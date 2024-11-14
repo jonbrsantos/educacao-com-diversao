@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="../static/css/memoria.css">
+</head>
+<body>
+    <div id="content">
+        <div class="game-container">
+            <h1>Jogo da Memória</h1>
+            <p id="instruction">Encontre todos os pares de cartas:</p>
+            <header>
+                <span>Tempo: <span class="timer">00</span> segundos</span>
+                <span>Acertos: <span id="correct-count">0</span></span>
+                <span>Erros: <span id="error-count">0</span></span>
+            </header>
+            <div class="grid"></div>
+        </div>
+        <div id="menu">
+            <form action="/alfabeto" method="get">
+                <button class="menu-button" type="submit">Alfabeto Divertido</button>
+            </form>
+            <form action="/rimas" method="get">
+                <button class="menu-button" type="submit">Rimas divertidas</button>
+            </form>
+            <form action="/memoria" method="get">
+                <button class="menu-button" type="submit">Memoria com Números</button>
+            </form>
+            <form action="/sair" method="get">
+                <button class="menu-button" type="submit">Sair</button>
+            </form>
+        </div>
+    </div>
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <h2>Parabéns! Você terminou o jogo!</h2>
+            <p>Acertos: <span id="final-correct-count"></span></p>
+            <p>Erros: <span id="final-error-count"></span></p>
+            <p>GOSTARIA DE JOGAR NOVAMENTE OU FECHAR O JOGO?</p>
+            <button id="restart-button">JOGAR NOVAMENTE</button>
+            <form action="/selectgame" method="get">
+                <button class="menu-button" type="submit">FECHAR</button>
+            </form>
+        </div>
+    </div>
+    <script src="../static/js/memoria.js"></script>
+</body>
+</html>

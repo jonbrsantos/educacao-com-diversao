@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIMAS DIVERTIDAS</title>
+    <link rel="stylesheet" href="../static/css/rimas.css">
+</head>
+<body>
+    <div id="content">    
+        <div class="game-container">
+            <h1>RIMAS DIVERTIDAS</h1>
+            <p id="instruction">OUÇA A PALAVRA E ESCOLHA A FIGURA CORRETA:</p>
+            <button id="play-sound">OUVIR PALAVRA</button>
+            <div id="images" class="images-container"></div>
+            <p id="feedback"></p>
+            <div id="score">
+                <p>ACERTOS: <span id="correct-count">0</span></p>
+                <p>ERROS: <span id="error-count">0</span></p>
+                <p>TEMPO: <span id="timer">0</span> segundos</p>
+            </div>
+        </div>
+        <div id="menu">
+            <form action="/alfabeto" method="get">
+                <button class="menu-button" type="submit">Alfabeto Divertido</button>
+            </form>
+            <form action="/rimas" method="get">
+                <button class="menu-button" type="submit">Rimas divertidas</button>
+            </form>
+            <form action="/memoria" method="get">
+                <button class="menu-button" type="submit">Memoria com Números</button>
+            </form>
+            <form action="/sair" method="get">
+                <button class="menu-button" type="submit">Sair</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <h2>PARABÉNS! VOCÊ TERMINOU O JOGO!</h2>
+            <p>ACERTOS: <span id="final-correct-count"></span></p>
+            <p>ERROS: <span id="final-error-count"></span></p>
+            <p>GOSTARIA DE JOGAR NOVAMENTE OU FECHAR O JOGO?</p>
+            <button id="restart-button">JOGAR NOVAMENTE</button>
+            <form action="/selectgame" method="get">
+                <button class="menu-button" type="submit">FECHAR</button>
+            </form>
+        </div>
+    </div>
+    <script src="../static/js/rimas.js"></script>
+</body>
+</html>
